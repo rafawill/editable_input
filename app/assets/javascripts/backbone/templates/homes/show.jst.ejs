@@ -1,0 +1,15 @@
+
+<div id="index-content">
+<div class="label">Joe:</div>
+<div class="name">
+<div class="select-editable">
+  <select id="value-joe" onchange="this.nextElementSibling.value=this.value">
+  	<% _.each(collection.models, function(data){ %>
+<option value="<%=data.get('name')%>" <%=data.get('selected') == 1 ? selected="selected" : '' %>><%=data.get('name')%></option>
+  	<% });%>
+  </select>
+  <input type="text" name="format" value="" id="input-editable"/>
+</div>
+</div>
+<div class="actions"><a href="javascript:void(0)" class="save">Save<a> <a href="javascript:void(0)" class="cancel">Cancel<a></div>
+</div>

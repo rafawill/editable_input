@@ -7,8 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<h3>Editable input test</h3>	
+<div id="content"></div>
+<script type="text/javascript">
 
-<%= yield %>
-
+window.router = new Joe.Routers.Main({
+        value: <%=raw @value.to_json.html_safe%>,
+        values: <%=raw @values.to_json.html_safe%>
+      });
+Backbone.history.start();
+</script>
 </body>
 </html>

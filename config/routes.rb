@@ -1,4 +1,11 @@
 Joe::Application.routes.draw do
+  get "home/index"
+
+  ##get "home/update"
+
+  root :to => 'home#index'
+  match "/homes/:id" => "home#update", :as => "update", :via => [:put]
+  match "/homes" => "home#create", :as => "create", :via => [:post]
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

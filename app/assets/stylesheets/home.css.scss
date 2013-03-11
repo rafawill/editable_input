@@ -1,0 +1,35 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+div#content{
+	width: 100%;
+	#index{
+		width: 900px;
+		height: 400px;
+		background: #DDD;
+		#index-content{
+		width: 800px;
+		margin: 0px auto;
+
+		div{
+			float: left;
+		}
+		.label{
+			width: 30px;
+		}
+		.name{
+			width: 200px;
+			div.select-editable{
+            position:relative; background-color:white; border:solid grey 1px;  width:120px; height:18px;
+            select { position:absolute; top:0px; left:0px; font-size:14px; border:none; width:120px; margin:0; }
+            input { position:absolute; top:0px; left:0px; width:100px; padding:1px; font-size:12px; border:none; height: 16px; }
+            select:focus, .select-editable input:focus { outline:none; }
+			}
+		}
+		.actions{
+			width: 400px;
+		}
+	    }
+	}
+
+}
