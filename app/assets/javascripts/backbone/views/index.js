@@ -9,12 +9,12 @@ Joe.Views.Homes.Index = Backbone.View.extend({
 		'click .edit': 'edit'
 	},
 	edit:function(event){
-		Backbone.history.navigate('homes/' + this.model.attributes[0].id, {trigger: true});
+		Backbone.history.navigate('values/' + this.model.id, {trigger: true});
 	},
 	render:function(){
 		var self = this
 		var el = this.$el
- 		var index = this.template({model:this.model.attributes[0]});
+ 		var index = this.template({model:this.model});
 		el.html(index);
 		return this;
 	}

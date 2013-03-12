@@ -30,7 +30,6 @@ Joe.Views.Homes.Show = Backbone.View.extend({
 					self.model.set(response);
 					self.collection.add(self.model);
 				Backbone.history.navigate('', {trigger: true,replace: true});
-				window.location.reload()	
 			}
 		});
 	},

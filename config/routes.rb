@@ -1,4 +1,10 @@
 Joe::Application.routes.draw do
+  get "values/index"
+
+  post "values/create"
+
+  put "values/update"
+
   get "home/index"
 
   ##get "home/update"
@@ -6,6 +12,14 @@ Joe::Application.routes.draw do
   root :to => 'home#index'
   match "/homes/:id" => "home#update", :as => "update", :via => [:put]
   match "/homes" => "home#create", :as => "create", :via => [:post]
+
+
+  resources :values do
+    member do
+        get 'list'
+    #       post 'toggle'
+    end
+  end       
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

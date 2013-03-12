@@ -1,5 +1,8 @@
 Joe.Models.Value = Backbone.Model.extend({
-
-urlRoot: '/homes'
+defaults: {
+    name: "No Set",
+    selected:1 
+  },
+urlRoot: '/values'
 
 });

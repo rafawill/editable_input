@@ -12,7 +12,6 @@
 <script type="text/javascript">
 
 window.router = new Joe.Routers.Main({
-        value: <%=raw @value.to_json.html_safe%>,
         values: <%=raw @values.to_json.html_safe%>
       });
 Backbone.history.start();
