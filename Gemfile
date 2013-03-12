@@ -7,6 +7,7 @@ gem 'twitter-bootstrap-rails'
 gem 'json'
 gem 'mysql'
 gem 'mysql2'
+gem 'pg'
 #gem 'hogan_assets'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
