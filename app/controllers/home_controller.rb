@@ -7,7 +7,7 @@ class HomeController < ApplicationController
   end
 
   def create
-    Value.update_all(:selected => 0)
+    Value.update_all(:selected => false)
   	value = Value.create({:name =>params[:name], :selected =>params[:selected]})
     render :json => value.as_json(value)  
 
@@ -16,7 +16,7 @@ class HomeController < ApplicationController
   
 
   def update
-  	Value.update_all(:selected => 0)
+  	Value.update_all(:selected => false)
   	value = Value.find(params[:id])
   	value.update_attributes(:selected =>params[:selected])
   	render :json => value.as_json({})  
