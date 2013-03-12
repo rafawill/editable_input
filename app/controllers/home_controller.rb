@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 	respond_to :json
   def index
-  	@value = Value.where('selected = ?',1)
+  	@value = Value.where('selected = ?',true)
   	@values = Value.all
   	render :nothing => true, :layout => "layouts/application"  
   end
