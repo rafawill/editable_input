@@ -10,10 +10,7 @@
 <h3>Editable input test</h3>	
 <div id="content"></div>
 <script type="text/javascript">
-
-window.router = new Joe.Routers.Main({
-        values: <%=raw @values.to_json.html_safe%>
-      });
+window.router = new Joe.Routers.Main();
 Backbone.history.start();
 </script>
 </body>

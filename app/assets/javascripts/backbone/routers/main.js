@@ -1,8 +1,5 @@
 Joe.Routers.Main = Backbone.Router.extend({
 
-initialize: function( options ){
-    Joe.values = new Joe.Collections.Values(options.values);
-},
 routes: {
 	'':'indexValues',
 	'values/:id':'homesShow'
@@ -17,8 +14,14 @@ indexValues:function(){
 	});
 },
 homesShow:function(id){
-	var value = Joe.values.get(id)
-	var homes = new Joe.Views.Homes.Show({model: value, collection:Joe.values});
-	$("#content").html(homes.render().el);
+	Joe.values = new Joe.Collections.Values();
+	Joe.values.fetch({
+		success:function(collection){
+			var value = Joe.values.get(id)
+			var homes = new Joe.Views.Homes.Show({model: value, collection:collection});
+			$("#content").html(homes.render().el);
+		}
+	});
+	
 }
 });

@@ -1,7 +1,7 @@
 Joe::Application.routes.draw do
   get "values/index"
 
-  post "values/create"
+  get "values/list"
 
   put "values/update"
 

@@ -4,7 +4,7 @@
 <div class="select-editable">
   <select id="value-joe" onchange="this.nextElementSibling.value=this.value">
   	<% _.each(collection.models, function(data){ %>
-<option value="<%=data.get('name')%>" <%=data.get('selected') == 1 ? selected="selected" : '' %>><%=data.get('name')%></option>
+<option id="<%=data.id%>" value="<%=data.get('name')%>" <%=data.get('selected') == 1 ? selected="selected" : '' %>><%=data.get('name')%></option>
   	<% });%>
   </select>
   <input type="text" name="format" value="" id="input-editable"/>
