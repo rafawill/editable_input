@@ -7,6 +7,7 @@ gem 'twitter-bootstrap-rails'
 gem 'json'
 gem 'mysql'
 gem 'mysql2'
+gem 'pg'
 #gem 'hogan_assets'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -32,7 +33,7 @@ end
 gem 'jquery-rails'
 
 group :production do
-  gem 'pg', '0.12.2'
+  #gem 'pg', '0.12.2'
 end
 
 # To use ActiveModel has_secure_password
