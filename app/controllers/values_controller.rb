@@ -20,7 +20,7 @@ class ValuesController < ApplicationController
   def update
   	Value.update_all(:selected => false)
   	value = Value.find(params[:id])
-  	value.update_attributes(:selected =>params[:selected])
+  	value.update_attributes({:name =>params[:name], :selected =>params[:selected]})
   	respond_with value
   end
 end
