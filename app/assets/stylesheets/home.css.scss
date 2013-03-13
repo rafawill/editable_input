@@ -28,6 +28,12 @@ div#content{
 		}
 		.actions{
 			width: 400px;
+			a{
+				color:#0000FF;
+				text-decoration: underline;
+				cursor:pointer;
+				margin: 0 5px;
+			}
 		}
 	    }
 	}

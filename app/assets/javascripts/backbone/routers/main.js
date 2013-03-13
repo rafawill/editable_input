@@ -9,7 +9,7 @@ indexValues:function(){
 	modelValue.fetch({
 		success:function(respond,model){
 			var homes = new Joe.Views.Homes.Index({model: modelValue});
-			$("#content").html(homes.render().el);
+			this.$("#content").html(homes.render().el);
 		}
 	});
 },
@@ -19,7 +19,7 @@ homesShow:function(id){
 		success:function(collection){
 			var value = Joe.values.get(id)
 			var homes = new Joe.Views.Homes.Show({model: value, collection:collection});
-			$("#content").html(homes.render().el);
+			this.$("#content").html(homes.render().el);
 		}
 	});
 	
